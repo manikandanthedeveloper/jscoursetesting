@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<title>Contact Us — Health Analysis Census</title>
+
+		<!-- Bootstrap CSS -->
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+		/>
+	</head>
+	<body class="bg-light">
+		<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+			<div class="container">
+				<a class="navbar-brand fw-bold" href="./index.html"
+					>Health Analysis Census</a
+				>
+				<button
+					class="navbar-toggler"
+					type="button"
+					data-bs-toggle="collapse"
+					data-bs-target="#navCollapse"
+					aria-controls="navCollapse"
+					aria-expanded="false"
+					aria-label="Toggle navigation"
+				>
+					<span class="navbar-toggler-icon"></span>
+				</button>
+
+				<div class="collapse navbar-collapse" id="navCollapse">
+					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+						<li class="nav-item">
+							<a class="nav-link" href="./index.html" id="home"
+								>Home</a
+							>
+						</li>
+						<li class="nav-item">
+							<a
+								class="nav-link active"
+								href="./health_contact.html"
+								id="contact"
+								>Contact Us</a
+							>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+		<main class="container py-5">
+			<div class="row justify-content-center">
+				<div class="col-md-10 col-lg-7">
+					<div class="card shadow-sm">
+						<div class="card-body">
+							<h1 class="h4 mb-3 text-center">Contact Us</h1>
+							<p class="text-center text-muted mb-4">
+								Feel free to contact us to learn more about
+								conditions and treatment methods.
+							</p>
+
+							<form id="contactForm" novalidate>
+								<div class="mb-3">
+									<label for="name" class="form-label"
+										>Name</label
+									>
+									<input
+										required
+										type="text"
+										class="form-control"
+										id="name"
+										name="name"
+									/>
+									<div class="invalid-feedback">
+										Please enter your name.
+									</div>
+								</div>
+
+								<div class="mb-3">
+									<label for="email" class="form-label"
+										>Email</label
+									>
+									<input
+										required
+										type="email"
+										class="form-control"
+										id="email"
+										name="email"
+									/>
+									<div class="invalid-feedback">
+										Please enter a valid email.
+									</div>
+								</div>
+
+								<div class="mb-3">
+									<label for="condition" class="form-label"
+										>Condition</label
+									>
+									<input
+										required
+										type="text"
+										class="form-control"
+										id="condition"
+										name="condition"
+									/>
+									<div class="invalid-feedback">
+										Please enter the condition.
+									</div>
+								</div>
+
+								<div class="mb-3">
+									<label for="message" class="form-label"
+										>Message</label
+									>
+									<textarea
+										required
+										class="form-control"
+										id="message"
+										name="message"
+										rows="5"
+									></textarea>
+									<div class="invalid-feedback">
+										Please enter your message.
+									</div>
+								</div>
+
+								<div class="d-grid">
+									<button
+										type="submit"
+										class="btn btn-primary"
+									>
+										Submit
+									</button>
+								</div>
+							</form>
+
+							<div
+								id="submitAlert"
+								class="alert alert-success mt-3 d-none"
+								role="alert"
+							>
+								Thank you for contacting us! We'll get back to
+								you soon.
+							</div>
+						</div>
+					</div>
+
+					<div class="text-center mt-3 text-muted small">
+						<p class="mb-0">
+							Or call our support line for urgent help.
+						</p>
+					</div>
+				</div>
+			</div>
+		</main>
+		<script src="./health_contact.js"></script>
+	</body>
+</html>
