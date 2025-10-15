@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Book Management System</title>
+
+		<!-- Bootstrap CSS -->
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
+		<main class="container pt-5 pb-5">
+			<div class="row g-4">
+				<div class="col-12 col-lg-5">
+					<div class="card shadow-sm">
+						<div class="card-body">
+							<h5 class="card-title mb-3">Add a Book</h5>
+
+							<form id="bookForm" onsubmit="addBook(event);">
+								<div class="mb-3">
+									<label for="bookName" class="form-label"
+										>Book Name</label
+									>
+									<input
+										type="text"
+										id="bookName"
+										class="form-control"
+										placeholder="Enter book title"
+									/>
+								</div>
+
+								<div class="mb-3">
+									<label for="authorName" class="form-label"
+										>Author Name</label
+									>
+									<input
+										type="text"
+										id="authorName"
+										class="form-control"
+										placeholder="Author name(s)"
+									/>
+								</div>
+
+								<div class="mb-3">
+									<label
+										for="bookDescription"
+										class="form-label"
+										>Book Description</label
+									>
+									<textarea
+										id="bookDescription"
+										class="form-control"
+										rows="4"
+										placeholder="Short description"
+									></textarea>
+								</div>
+
+								<div class="mb-3">
+									<label for="pagesNumber" class="form-label"
+										>No. of Pages</label
+									>
+									<input
+										type="number"
+										id="pagesNumber"
+										class="form-control"
+										min="1"
+										placeholder="e.g. 320"
+									/>
+								</div>
+
+								<div class="d-grid gap-2">
+									<button
+										type="submit"
+										class="btn btn-primary"
+									>
+										Add Book
+									</button>
+                                    <button type="button" class="btn btn-secondary mt-2" onclick="clearInputs();">Clear</button>                                    
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-12 col-lg-7">
+					<div
+						class="d-flex justify-content-between align-items-center mb-3"
+					>
+						<h5 class="mb-0">Books</h5>
+						<small id="booksCount" class="text-muted"
+							>0 books</small
+						>
+					</div>
+
+					<div class="row row-cols-1 g-3">
+						<table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Book Name</th>
+                                    <th>Author Name</th>
+                                    <th>Book Description</th>
+                                    <th>Pages Number</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="books">
+                                <tr>
+                                    <td colspan="6" class="text-center">
+                                        No books available
+                                    </td>
+                                </tr>
+                            </tbody>
+					</div>
+				</div>
+			</div>
+		</main>
+
+		<!-- Bootstrap Bundle (includes Popper) -->
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+		<!-- Application script -->
+		<script src="./book_system.js"></script>
+	</body>
+</html>
